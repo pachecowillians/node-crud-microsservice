@@ -1,0 +1,8 @@
+version: "3"
+services:
+    delete:
+        restart: on-failure
+        build: ../delete/
+        container_name: delete
+        ports:
+            - "3334:3000"
