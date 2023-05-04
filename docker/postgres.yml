@@ -9,3 +9,7 @@ services:
             POSTGRES_USER: username
             POSTGRES_PASSWORD: password
             POSTGRES_DB: default_database
+        deploy:
+            replicas: 2
+            placement:
+                constraints: [node.role==worker]
