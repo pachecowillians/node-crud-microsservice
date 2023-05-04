@@ -1,8 +1,8 @@
 #!/bin/bash
 
-docker compose -f postgres.yaml down
-docker compose -f insert.yaml down
-docker compose -f get-all.yaml down
-docker compose -f get-one.yaml down
-docker compose -f update.yaml down
-docker compose -f delete.yaml down
+docker compose -f postgres.yml down
+docker compose -f insert.yml down
+docker compose -f get-all.yml down
+docker compose -f get-one.yml down
+docker compose -f update.yml down
+docker compose -f delete.yml down
