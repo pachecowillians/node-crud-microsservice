@@ -1,0 +1,8 @@
+version: "3"
+services:
+    get-all:
+        restart: on-failure
+        build: ../get-all/
+        container_name: get-all
+        ports:
+            - "3331:3000"
