@@ -7,7 +7,7 @@ const host = process.env.HOST;
 const pool = new Pool({
     user: 'username',
     host: host,
-    database: 'default_database',
+    database: 'db_api',
     password: 'password',
     port: 5432,
 })
