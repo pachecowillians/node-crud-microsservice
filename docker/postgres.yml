@@ -1,15 +1,15 @@
 version: "3"
 services:
     postgres:
-        image: "postgres:latest"
+        image: "postgres:15"
         container_name: postgres
         ports:
             - 5432:5432
         environment:
             POSTGRES_USER: username
             POSTGRES_PASSWORD: password
-            POSTGRES_DB: default_database
+            POSTGRES_DB: db_api
         deploy:
-            replicas: 2
+            replicas: 1
             placement:
                 constraints: [node.role==worker]
