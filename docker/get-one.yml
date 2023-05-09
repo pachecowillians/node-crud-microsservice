@@ -1,8 +1,12 @@
 version: "3"
 services:
-    get-one:
-        restart: on-failure
-        build: ../get-one/
-        container_name: get-one
+    insert:
+        image: pachecowillians/get-one:latest
         ports:
             - "3332:3000"
+        env_file:
+            - ../.env
+        deploy:
+            replicas: 2
+            placement:
+                constraints: [node.role==worker]
