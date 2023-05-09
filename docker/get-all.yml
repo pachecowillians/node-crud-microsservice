@@ -1,8 +1,12 @@
 version: "3"
 services:
-    get-all:
-        restart: on-failure
-        build: ../get-all/
-        container_name: get-all
+    insert:
+        image: pachecowillians/get-all:latest
         ports:
-            - "3331:3000"
+            - "3330:3000"
+        env_file:
+            - ../.env
+        deploy:
+            replicas: 2
+            placement:
+                constraints: [node.role==worker]
