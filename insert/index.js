@@ -5,8 +5,6 @@ const server = express();
 
 server.use(express.json());
 
-const geeks = [];
-
 server.post('/geeks', db.createGeek);
 
 server.listen(3000);
