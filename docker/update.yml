@@ -1,8 +1,12 @@
 version: "3"
 services:
-    update:
-        restart: on-failure
-        build: ../update/
-        container_name: update
+    insert:
+        image: pachecowillians/update:latest
         ports:
             - "3333:3000"
+        env_file:
+            - ../.env
+        deploy:
+            replicas: 2
+            placement:
+                constraints: [node.role==worker]
