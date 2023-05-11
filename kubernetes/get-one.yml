@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: get-one-pod
+spec:
+    containers:
+        - name: get-one-container
+          image: pachecowillians/get-one:latest
+          ports:
+              - containerPort: 3332
+          env:
+              - name: HOST
+                value: 10.98.81.251
+    hostNetwork: true
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: get-one-service
+spec:
+    selector:
+        app: get-one
+    ports:
+        - protocol: TCP
+          port: 3332
+          targetPort: 3332
+    type: LoadBalancer
