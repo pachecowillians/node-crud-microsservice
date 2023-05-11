@@ -4,5 +4,5 @@ COPY package.json /app
 COPY yarn.lock /app
 RUN yarn install 
 COPY . /app 
-EXPOSE 3000
+EXPOSE 3334
 CMD node index.js 

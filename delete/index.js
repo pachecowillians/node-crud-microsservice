@@ -7,4 +7,4 @@ server.use(express.json());
 
 server.delete('/geeks/:id', db.deleteGeek);
 
-server.listen(3000);
+server.listen(3334);

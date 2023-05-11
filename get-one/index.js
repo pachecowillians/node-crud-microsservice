@@ -7,4 +7,4 @@ server.use(express.json());
 
 server.get('/geeks/:id', db.getGeekById);
 
-server.listen(3000);
+server.listen(3332);
