@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: insert-pod
+spec:
+    containers:
+        - name: insert-container
+          image: pachecowillians/insert:latest
+          ports:
+              - containerPort: 3330
+          env:
+              - name: HOST
+                value: 10.98.81.251
+    hostNetwork: true
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: insert-service
+spec:
+    selector:
+        app: insert
+    ports:
+        - protocol: TCP
+          port: 3330
+          targetPort: 3330
+    type: LoadBalancer

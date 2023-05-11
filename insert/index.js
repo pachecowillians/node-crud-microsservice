@@ -7,4 +7,4 @@ server.use(express.json());
 
 server.post('/geeks', db.createGeek);
 
-server.listen(3000);
+server.listen(3330);
