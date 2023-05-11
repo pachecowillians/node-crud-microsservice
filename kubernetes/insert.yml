@@ -10,7 +10,7 @@ spec:
               - containerPort: 3330
           env:
               - name: HOST
-                value: 10.98.81.251
+                value: 10.96.183.54
     hostNetwork: true
 ---
 apiVersion: v1
@@ -24,4 +24,4 @@ spec:
         - protocol: TCP
           port: 3330
           targetPort: 3330
-    type: LoadBalancer
+    type: NodePort
