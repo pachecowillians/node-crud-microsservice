@@ -3,7 +3,7 @@ services:
     insert:
         image: pachecowillians/delete:latest
         ports:
-            - "3334:3000"
+            - "3334:3334"
         env_file:
             - ../.env
         deploy:

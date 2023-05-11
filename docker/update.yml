@@ -3,7 +3,7 @@ services:
     insert:
         image: pachecowillians/update:latest
         ports:
-            - "3333:3000"
+            - "3333:3333"
         env_file:
             - ../.env
         deploy:
