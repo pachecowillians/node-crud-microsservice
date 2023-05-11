@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: delete-pod
+spec:
+    containers:
+        - name: delete-container
+          image: pachecowillians/delete:latest
+          ports:
+              - containerPort: 3334
+          env:
+              - name: HOST
+                value: 10.98.81.251
+    hostNetwork: true
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: delete-service
+spec:
+    selector:
+        app: delete
+    ports:
+        - protocol: TCP
+          port: 3334
+          targetPort: 3334
+    type: LoadBalancer
