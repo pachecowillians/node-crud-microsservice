@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: get-all-pod
+spec:
+    containers:
+        - name: get-all-container
+          image: pachecowillians/get-all:latest
+          ports:
+              - containerPort: 3331
+          env:
+              - name: HOST
+                value: 10.98.81.251
+    hostNetwork: true
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: get-all-service
+spec:
+    selector:
+        app: get-all
+    ports:
+        - protocol: TCP
+          port: 3331
+          targetPort: 3331
+    type: LoadBalancer
