@@ -41,7 +41,7 @@ Then, there are some functions that can be accessed on the service:
 |---------	|--------	|-----------------------------------	|---------------------	|
 | Create  	| POST   	| http://localhost:3000/geeks       	| { 	"name": "Teste" } 	|
 | Get All 	| GET    	| http://localhost:3000/geeks       	| -                   	|
-| Get One 	| GET    	| http://localhost:3000/geeks       	| -                   	|
+| Get One 	| GET    	| http://localhost:3000/geeks/<id\>    	| -                   	|
 | Update  	| PUT    	| http://localhost:3000/geeks/<id\> 	| { 	"name": "Teste" } 	|
 | Delete  	| DELETE 	| http://localhost:3000/geeks/<id\> 	| -                   	|
 
