@@ -22,7 +22,14 @@ docker compose -f postgres.yml down
 docker compose -f node-app.yml down
 ```
 
-After creating the containers, access the postgres database placed at `localhost:5432` and create a table called geeks with the following SQL command:
+After creating the containers, access the postgres database placed at `localhost:5432`
+
+
+| User     	| Password 	| Default Database 	|
+|----------	|----------	|------------------	|
+| username 	| password 	| db_api           	| 
+
+Create a table called geeks with the following SQL command:
 
 ```sql
 CREATE TABLE "public"."geeks" ("id" SERIAL PRIMARY KEY, "name" VARCHAR(255) NOT NULL)
