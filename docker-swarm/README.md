@@ -1,10 +1,10 @@
+# Node.js CRUD Application with Docker Swarm
 
 <p align="center">
   <a href="https://nodejs.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/256px-Node.js_logo.svg.png" alt="Node.js" height="100px"></a>
   <a href="https://www.docker.com/"><img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker" height="100px"></a>
 </p>
 
-# Node.js CRUD Application with Docker Swarm
 
 This repository contains the Docker Swarm deployment configuration files for a Node.js CRUD (Create, Read, Update, Delete) application. The application containers are available on Docker Hub.
 
