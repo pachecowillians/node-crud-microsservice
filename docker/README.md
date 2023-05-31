@@ -1,47 +1,56 @@
 # Node Application
 
-To run the application, open `docker` folder with the following command:
+This README provides instructions for running a Node.js application with Docker. Follow the steps below to get started.
+
+## Installation
+
+1. Navigate to the `docker` folder using the following command:
 
 ```sh
 cd docker
 ```
 
-If you are a linux user, you can run, restart and stop the app with the respective scripts: `run.sh`, `restart.sh` and `stop.sh`.
+2. If you are a Linux user, you can run, restart, and stop the application using the respective scripts: `run.sh`, `restart.sh`, and `stop.sh`.
 
-If you are not a linux user, you can run the container with the following command:
+3. If you are not a Linux user, you can run the application using Docker Compose with the following commands:
 
 ```docker
 docker compose -f postgres.yml up -d
 docker compose -f node-app.yml up -d
 ```
 
-To stop the containers, just use:
+To stop the containers, use the following commands:
 
 ```docker
 docker compose -f postgres.yml down
 docker compose -f node-app.yml down
 ```
 
-After creating the containers, access the postgres database placed at `localhost:5432`
+## Accessing the Database
 
+After creating the containers, you can access the PostgreSQL database at `localhost:5432`.
 
 | User     	| Password 	| Default Database 	|
 |----------	|----------	|------------------	|
-| username 	| password 	| db_api           	| 
+| username 	| password 	| db_api           	|
 
-Create a table called geeks with the following SQL command:
+Create a table called `geeks` with the following SQL command:
 
 ```sql
 CREATE TABLE "public"."geeks" ("id" SERIAL PRIMARY KEY, "name" VARCHAR(255) NOT NULL)
 ```
 
-Then, there are some functions that can be accessed on the service:
+## API Endpoints
 
-| Service 	| Method 	| Route                             	| Request Body        	|
-|---------	|--------	|-----------------------------------	|---------------------	|
-| Create  	| POST   	| http://localhost:3000/geeks       	| { 	"name": "Teste" } 	|
-| Get All 	| GET    	| http://localhost:3000/geeks       	| -                   	|
-| Get One 	| GET    	| http://localhost:3000/geeks/<id\>    	| -                   	|
-| Update  	| PUT    	| http://localhost:3000/geeks/<id\> 	| { 	"name": "Teste" } 	|
-| Delete  	| DELETE 	| http://localhost:3000/geeks/<id\> 	| -                   	|
+The application exposes the following API endpoints:
+
+| Method 	| Route                             	| Request Body        	|
+|--------	|-----------------------------------	|---------------------	|
+| POST   	| http://localhost:3000/geeks       	| { "name": "Test" }  	|
+| GET    	| http://localhost:3000/geeks       	| -                   	|
+| GET    	| http://localhost:3000/geeks/<id\>    	| -                   	|
+| PUT    	| http://localhost:3000/geeks/<id\> 	| { "name": "Test" }  	|
+| DELETE 	| http://localhost:3000/geeks/<id\> 	| -                   	|
+
+Feel free to modify the routes and request bodies according to your needs.
 
