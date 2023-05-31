@@ -1,7 +1,7 @@
 # Microservices Readme
 
 <p align="center">
-  <a href="https://www.docker.com/"><img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker" height="100px"></a>
+  <a href="https://www.docker.com/"><img src="https://raw.githubusercontent.com/pachecowillians/svg-icons/817a7cc24c15f665e55e89d21e23752c89f4ed5f/img/docker.svg" alt="Docker" height="100px"></a>
 </p>
 
 
