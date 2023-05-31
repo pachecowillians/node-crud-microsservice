@@ -87,8 +87,6 @@ docker run -p 3333:3333 pachecowillians/update
 docker run -p 3334:3334 pachecowillians/delete
 ```
 
-Make sure to replace `<manager-ip>` with the IP address of the Swarm manager machine.
-
 Now you can access the microservices using the provided routes.
 
 ## Contributing
