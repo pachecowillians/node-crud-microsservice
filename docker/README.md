@@ -1,5 +1,11 @@
 # Node Application
 
+<p align="center">
+  <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="Node.js" height="100px">
+  <img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker" height="100px">
+</p>
+
+
 This README provides instructions for running a Node.js application with Docker. Follow the steps below to get started.
 
 ## Installation
