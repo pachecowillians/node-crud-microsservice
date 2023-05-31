@@ -1,5 +1,11 @@
 # Node.js CRUD Application with Docker, Docker Swarm, Kubernetes, and Microservices
 
+<p align="center">
+  <a href="https://nodejs.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/256px-Node.js_logo.svg.png" alt="Node.js" height="100px"></a>
+  <a href="https://www.docker.com/"><img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker" height="100px"></a>
+  <a href="https://kubernetes.io/"><img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="Kubernetes" height="100px"></a>
+</p>
+
 This repository consists of four components that demonstrate different containerization and orchestration technologies, as well as microservices architecture. The components are:
 
 1. `docker/`: Contains the complete Node.js CRUD application running on Docker.
