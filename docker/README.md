@@ -10,10 +10,10 @@ This README provides instructions for running a Node.js application with Docker.
 
 ## Installation
 
-1. Navigate to the `docker` folder using the following command:
+1. Navigate to the `scripts` folder using the following command:
 
 ```sh
-cd docker
+cd scripts
 ```
 
 2. If you are a Linux user, you can run, restart, and stop the application using the respective scripts: `run.sh`, `restart.sh`, and `stop.sh`.
