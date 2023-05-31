@@ -1,5 +1,10 @@
 # Microservices Readme
 
+<p align="center">
+  <a href="https://www.docker.com/"><img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker" height="100px"></a>
+</p>
+
+
 This readme provides instructions on building and pushing the Docker images for each microservice to Docker Hub.
 
 ## Build and Push Instructions
