@@ -185,13 +185,11 @@ Use the following configuration details to connect to the database:
 
 | Configuration     | Value         |
 |-------------------|---------------|
-| Host              | `<manager
-
--ip>` |
+| Host              | `<manager-ip>`|
 | Port              | 5432          |
-| Database Name     | postgres      |
-| User              | postgres      |
-| Password          | postgres      |
+| Database Name     | db_api        |
+| User              | username      |
+| Password          | password      |
 
 ## Tools Used
 
