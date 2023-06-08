@@ -54,14 +54,22 @@ docker-machine ip swarm-manager
 
 Make note of the IP address returned. You will need it to configure the Docker Swarm.
 
-5. Configure the Swarm manager machine, first Swarm worker machine, and second Swarm worker machine:
+5. List the Docker machines to verify their status:
 
 ```bash
-docker-machine ssh swarm-manager "echo 'HOST=<manager-ip>' > node-crud-microsservice/.env; docker pull pachecowillians/insert; docker pull pachecowillians/delete; docker pull pachecowillians/get-one; docker pull pachecowillians/get-all; docker pull pachecowillians/update; git clone https://github.com/pachecowillians/node-crud-microsservice"
+docker-machine ls
+```
 
-docker-machine ssh swarm-worker-1 "echo 'HOST=<manager-ip>' > node-crud-microsservice/.env; docker pull pachecowillians/insert; docker pull pachecowillians/delete; docker pull pachecowillians/get-one; docker pull pachecowillians/get-all; docker pull pachecowillians/update; git clone https://github.com/pachecowillians/node-crud-microsservice"
+This command will display information about the Docker machines, including their names, drivers, states, and IP addresses.
 
-docker-machine ssh swarm-worker-2 "echo 'HOST=<manager-ip>' > node-crud-microsservice/.env; docker pull pachecowillians/insert; docker pull pachecowillians/delete; docker pull pachecowillians/get-one; docker pull pachecowillians/get-all; docker pull pachecowillians/update; git clone https://github.com/pachecowillians/node-crud-microsservice"
+6. Configure the Swarm manager machine, first Swarm worker machine, and second Swarm worker machine:
+
+```bash
+docker-machine ssh swarm-manager "git clone https://github.com/pachecowillians/node-crud-microsservice; echo 'HOST=<manager-ip>' > node-crud-microsservice/.env; docker pull pachecowillians/insert; docker pull pachecowillians/delete; docker pull pachecowillians/get-one; docker pull pachecowillians/get-all; docker pull pachecowillians/update"
+
+docker-machine ssh swarm-worker-1 "git clone https://github.com/pachecowillians/node-crud-microsservice; echo 'HOST=<manager-ip>' > node-crud-microsservice/.env; docker pull pachecowillians/insert; docker pull pachecowillians/delete; docker pull pachecowillians/get-one; docker pull pachecowillians/get-all; docker pull pachecowillians/update"
+
+docker-machine ssh swarm-worker-2 "git clone https://github.com/pachecowillians/node-crud-microsservice; echo 'HOST=<manager-ip>' > node-crud-microsservice/.env; docker pull pachecowillians/insert; docker pull pachecowillians/delete; docker pull pachecowillians/get-one; docker pull pachecowillians/get-all; docker pull pachecowillians/update"
 ```
 
 Replace `<manager-ip>` with the IP address of the Swarm manager machine obtained in the previous step.
@@ -83,9 +91,7 @@ Replace `<manager-ip>` with the IP address of the Swarm manager machine obtained
 2. Join the worker machines to the Swarm:
 
 ```bash
-docker-machine ssh swarm-worker-1 "docker
-
- swarm join --token <worker-token> <manager-ip>:2377"
+docker-machine ssh swarm-worker-1 "docker swarm join --token <worker-token> <manager-ip>:2377"
 ```
 
 ```bash
