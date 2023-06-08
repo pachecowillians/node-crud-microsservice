@@ -5,7 +5,6 @@
   <a href="https://www.docker.com/"><img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker" height="100px"></a>
 </p>
 
-
 This repository contains the Docker Swarm deployment configuration files for a Node.js CRUD (Create, Read, Update, Delete) application. The application containers are available on Docker Hub.
 
 ## Prerequisites
@@ -167,8 +166,6 @@ docker-machine ssh swarm-manager "docker service ls"
 ```
 
 This command will display information about the services running in the Swarm, including their names, replicas, and published ports.
-
-
 
 ## Microservices Routes
 
