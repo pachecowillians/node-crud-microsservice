@@ -160,6 +160,16 @@ You should see the list of services running for each microservice.
 
 7. Access the application by visiting the defined service ports in your browser.
 
+To check the list of services running in the Docker Swarm, use the following command:
+
+```bash
+docker-machine ssh swarm-manager "docker service ls"
+```
+
+This command will display information about the services running in the Swarm, including their names, replicas, and published ports.
+
+
+
 ## Microservices Routes
 
 Use the following table to access the routes for each microservice:
