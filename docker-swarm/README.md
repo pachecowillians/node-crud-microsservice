@@ -176,11 +176,11 @@ Use the following table to access the routes for each microservice:
 
 | Method | Route                                    | Request Body       |
 | ------ | ---------------------------------------- | ------------------ |
-| POST   | http://<manager-ip>:3330/geeks            | { "name": "Test" } |
-| GET    | http://<manager-ip>:3331/geeks/:id        | -                  |
-| GET    | http://<manager-ip>:3332/geeks            | -                  |
-| DELETE | http://<manager-ip>:3333/geeks/:id        | -                  |
-| PUT    | http://<manager-ip>:3334/geeks/:id        | { "name": "Test" } |
+| POST   | http://\<manager-ip\>:3330/geeks            | { "name": "Test" } |
+| GET    | http://\<manager-ip\>:3331/geeks/:id        | -                  |
+| GET    | http://\<manager-ip\>:3332/geeks            | -                  |
+| DELETE | http://\<manager-ip\>:3333/geeks/:id        | -                  |
+| PUT    | http://\<manager-ip\>:3334/geeks/:id        | { "name": "Test" } |
 
 Replace `<manager-ip>` with the IP address of the Swarm manager machine obtained earlier.
 
